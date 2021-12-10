@@ -53,7 +53,6 @@ We starten met alle objecten te creëren. Er zijn 3 objecten: Road, Player en Ob
 <br>
 Onderstaande afbeelding toont de volledige hiërarchie binnen de spelobjecten met hun benaming zoals ze in deze handleiding gebruikt zullen worden.
 <br>
-<br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/hi%C3%ABrachie-objecten.png"/>
 <br>
 

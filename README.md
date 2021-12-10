@@ -8,27 +8,8 @@
     - [Speelveld object](#speelveldobject)
     - [Player object](#playerobject)
     - [Obstacle object](#obstacleobject)
-    - [Scorebord object](#scorebordobject)
 5. [Observaties, acties & beloning systeem](#beloning)
-6. [Spelobjecten scripts (C#)](#allescripts)
-    - [Environment.cs (omgeving) *code-snippets*](#scripts)
-        * [Overzicht methodes van de omgeving](#environment)
-        * [Object-variabelen van de omgeving](#environment2)
-        * [Initialisatie van de omgeving instantie](#environment3)
-        * [Opkuisen van het speelveld](#environment4)
-        * [Scorebord](#environment5)
-        * [Genereren van een traveller (reiziger)](#environment6)
-    - [Traveller.cs (reiziger) *code-snippets*](#scripts2)        
-    - [Thief.cs (dief) *code-snippets*](#scripts3)
-        * [Overzicht van methodes](#thief)
-        * [Object variabelen](#thief2)
-        * [Initialiseer de dief](#thief3)
-        * [OnEpisodeBegin](#thief4)
-        * [Heuristic](#thief5)
-        * [OnActionReceived](#thief6)
-        * [OnCollisionEnter](#thief7)
-        * [DestroyObjects (Optimizations)](#thief8)
-7. [Resultaat in Tensorflow](#tensorflow)
+
 
 ## Introductie <a name="introductie"></a>
 In  deze tutorial zullen we stap voor stap uitleggen hoe je door middel van *Machine Learning* - *ML Agents*, het gebruik van *Unity3D* en met behulp van *C#* code een basic project tot stand kan brengen. Iemand zonder programmeer ervaring zou deze tutorial ook moeten kunnen volgen. 
@@ -81,5 +62,5 @@ Het obstakel heeft volgende eigenschappen:
 - Rotatie: X = Y = Z = 0
 
 Onderstaande afbeelding toont de volledige hiërarchie binnen de spelobjecten met hun benaming zoals ze in deze handleiding gebruikt zullen worden. 
-<img alt="header-image" width="40%" height="40%" align="center" src="./Images/Hiërachie-objecten.png"/>
+<img alt="header-image" width="40%" height="40%" align="center" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/hi%C3%ABrachie-objecten.png"/>
 

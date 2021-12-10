@@ -221,6 +221,38 @@ Selecteer het Obstacle object in Unity en voeg volgende componenten eraan toe:
 <br>
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
+
+#### Obstacle: child-objecten
+Het Obstacle object heef één child-object, nl. WallReward. We gaan dit child-object toevoegen:
+<br>
+
+##### WallReward
+<br>
+Voeg aan het *Obstacle* object een *Cube* object toe en geef het volgende eigenschappen:
+- Naam: WallReward
+- Positie: X = 0 | Y = 2.14 | Z = 1.12
+- Rotatie: X = Y = Z = 0
+- Scale: X = 1 | Y = 5 | Z = 0.5
+- Tag: wallreward
+
+<br>
+Selecteer het WallReward object in Unity en voeg volgende componenten eraan toe:
+<br>
+
+**Rigidbody**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rigidbody.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Rigibody* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
+**Box Collider**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
 <br>
 >Maak van het Obstacle object een *Prefab*
 <br>

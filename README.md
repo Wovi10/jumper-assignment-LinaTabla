@@ -67,6 +67,9 @@ De player heeft volgende eigenschappen:
 - Rotatie: X = 0 | Y = 0 | Z = 90
 
 Selecteer de Player object in Unity en voeg volgende componenten eraan toe:
+<br>
+<br>
+
 **Rigidbody**
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rigidbody.png"/>
@@ -82,6 +85,7 @@ Selecteer de Player object in Unity en voeg volgende componenten eraan toe:
 <br>
 
 **Ray Perception Sensor3D**
+<br>
 De acties die de dief object zal gaan uitvoeren zijn gebaseerd op observaties. Om ervoor te gaan zorgen dat de dief kan gaan observeren maken we gebruiken van het **Ray Perception Sensor3D** component.
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rps3D.png"/>
@@ -90,6 +94,7 @@ De acties die de dief object zal gaan uitvoeren zijn gebaseerd op observaties. O
 <br>
 
 **Behavior Parameters**
+<br>
 Voeg een *Behavior parameters* toe met de naam **Player**
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/behaviorparam.png"/>
@@ -98,9 +103,10 @@ Voeg een *Behavior parameters* toe met de naam **Player**
 <br>
 
 **Decision requester**
+<br>
 Voeg een *Decision requesters* toe (dit is een automatische trigger om de agent te dwingen iets te gaan doen)
 <br>
-<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/desicionrequester.png"/>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/decisionrequester.png"/>
 <br>
 >Zorg ervoor dat de instellingen van het component *Decision requester* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>

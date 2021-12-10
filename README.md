@@ -66,7 +66,6 @@ Het speelveld heeft volgende eigenschappen:
 * Schaal: X = 2 | Y = 0.1 | Z = 10
 * Tag: road
 
-<br>
 Selecteer het Road object in Unity en voeg volgend component eraan toe:
 <br>
 <br>
@@ -78,23 +77,27 @@ Selecteer het Road object in Unity en voeg volgend component eraan toe:
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
-#### Speelveld: child-objecten
-Het Road object heeft vier child-objecten, nl. SpawnPoint, WallEnd, Reset en WallTop. We gaan elk child-object toevoegen:
+**Child-objecten**
+Het Road object heeft vier child-objecten, nl.
+* SpawnPoint
+* WallEnd
+* Reset
+* WallTop
+
+We gaan elk child-object toevoegen:
 <br>
 
-##### SpawnPoint
+#### SpawnPoint
 Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenschappen:
-* Naam: SpawnPoint
+* Naam: *SpawnPoint*
 * Positie: X = 0 | Y = 4 | Z = 0.3
 * Rotatie: X = Y = Z = 0
 * Scale: X = 0.5 | Y = 0.5 | Z = 0.5
 * Eventueel een roze *Icon* zodat het goed te zien is
 
-<br>
-
-##### WallEnd
+#### WallEnd
 Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschappen:
-- Naam: WallEnd
+- Naam: *WallEnd*
 - Positie: X = 0 | Y = 4.14 | Z = -0.55
 - Rotatie: X = Y = Z = 0
 - Scale: X = 1.2 | Y = 12 | Z = 0.12
@@ -109,10 +112,11 @@ Selecteer het *Wallend* object in Unity en voeg volgend component eraan toe:
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
-##### Reset
+#### Reset
 Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenschappen:
 * Naam: Reset
 * Positie: X = 0 | Y = 3.5 | Z = -0.45
@@ -122,7 +126,7 @@ Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenscha
 
 <br>
 
-##### WallTop
+#### WallTop
 Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschappen:
 * Naam: WallTop
 * Positie: X = -0.003 | Y = 31.3 | Z = -0.389
@@ -131,6 +135,7 @@ Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschap
 * Tag: walltop
 
 <br>
+
 Selecteer het *WallTop* object in Unity en voeg volgend component eraan toe:
 <br>
 <br>

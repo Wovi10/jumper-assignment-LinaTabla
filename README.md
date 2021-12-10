@@ -79,6 +79,7 @@ Het obstakel heeft volgende eigenschappen:
 - Positie: X = 0 | Y = 0.4 | Z = 3
 - Rotatie: X = Y = Z = 0
 
-Onderstaande afbeelding toont de volledige hiërarchie binnen de spelobjecten met hun benaming zoals ze in deze handleiding gebruikt zullen worden. 
+Onderstaande afbeelding toont de volledige hiërarchie binnen de spelobjecten met hun benaming zoals ze in deze handleiding gebruikt zullen worden.
+<br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/hi%C3%ABrachie-objecten.png"/>
 

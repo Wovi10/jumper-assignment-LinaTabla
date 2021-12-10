@@ -58,7 +58,7 @@ Het speelveld heeft volgende eigenschappen:
 - Schaal: X = 14 | Y = 0.5 | Z = 1.5
 - Positie en rotatie: X = Y = Z = 0
 
-### Player object <a name="obstacleobject"></a>
+### Player object <a name="playerobject"></a>
 De player heeft volgende eigenschappen:
 - Naam: *Player*
 - 3D Object: Cube

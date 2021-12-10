@@ -74,15 +74,19 @@ Selecteer het Road object in Unity en voeg volgend component eraan toe:
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
 **Child-objecten**
+<br>
 Het Road object heeft vier child-objecten, nl.
 * SpawnPoint
 * WallEnd
 * Reset
 * WallTop
+
+<br>
 
 We gaan elk child-object toevoegen:
 <br>
@@ -104,6 +108,7 @@ Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschap
 - Tag: wallend
 
 <br>
+
 Selecteer het *Wallend* object in Unity en voeg volgend component eraan toe:
 <br>
 <br>
@@ -144,6 +149,7 @@ Selecteer het *WallTop* object in Unity en voeg volgend component eraan toe:
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
@@ -159,11 +165,13 @@ De player heeft volgende eigenschappen:
 <br>
 Selecteer de Player object in Unity en voeg volgende componenten eraan toe:
 <br>
+<br>
 
 **Rigidbody**
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rigidbody.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Rigibody* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
@@ -171,15 +179,17 @@ Selecteer de Player object in Unity en voeg volgende componenten eraan toe:
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
-**Ray Perception Sensor3D**
+**Ray Perception Sensor 3D**
 <br>
-De acties die de dief object zal gaan uitvoeren zijn gebaseerd op observaties. Om ervoor te gaan zorgen dat de dief kan gaan observeren maken we gebruiken van het **Ray Perception Sensor3D** component.
+De acties die de dief object zal gaan uitvoeren zijn gebaseerd op observaties. Om ervoor te gaan zorgen dat de dief kan gaan observeren maken we gebruiken van het **Ray Perception Sensor 3D** component.
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rps3D.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Ray Perception Sensor3D* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
@@ -189,6 +199,7 @@ Voeg een *Behavior parameters* toe met de naam **Player**
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/behaviorparam.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Behavior Parameters* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
@@ -198,6 +209,7 @@ Voeg een *Decision requesters* toe (dit is een automatische trigger om de agent 
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/decisionrequester.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Decision requester* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
@@ -230,11 +242,14 @@ Selecteer het Obstacle object in Unity en voeg volgende componenten eraan toe:
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
-#### Obstacle: child-objecten
-Het Obstacle object heef één child-object, nl. WallReward. We gaan dit child-object toevoegen:
+
+**Child-objecten**
 <br>
 
-##### WallReward
+Het Obstacle object heef één child-object, nl. **WallReward**. We gaan dit child-object toevoegen:
+<br>
+
+#### WallReward
 Voeg aan het *Obstacle* object een *Cube* object toe en geef het volgende eigenschappen:
 - Naam: WallReward
 - Positie: X = 0 | Y = 2.14 | Z = 1.12
@@ -251,6 +266,7 @@ Selecteer het WallReward object in Unity en voeg volgende componenten eraan toe:
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rigidbody.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Rigibody* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
@@ -258,11 +274,13 @@ Selecteer het WallReward object in Unity en voeg volgende componenten eraan toe:
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
 <br>
+
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
-#### Obstacle: prefab
+**Obstacle: prefab**
 Maak van het Obstacle object een *Prefab*
+<br>
 <br>
 
 

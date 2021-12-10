@@ -8,13 +8,12 @@
     - [Speelveld object](#speelveldobject)
     - [Player object](#playerobject)
     - [Obstacle object](#obstacleobject)
-5. [Observaties, acties & beloning systeem](#beloning)
-6. [Spelobjecten scripts (C#)](#allescripts)
-    - [Environment.cs (omgeving) *code-snippets*](#scripts)
-        * [Overzicht methodes van de omgeving](#environment)
-        * [Object-variabelen van de omgeving](#environment2)
-        * [Initialisatie van de omgeving instantie](#environment3)
-        * [Opkuisen van het speelveld](#environment4)
+5. [Spelobjecten scripts (C#)](#allescripts)
+    - [Spawner.cs (omgeving) *code-snippets*](#scripts)
+        * [Overzicht van de methodes](#spawner)
+        * [Object-variabelen](#spawner2)
+        * [Initialisatie](#spawner3)
+        * [Opkuisen van het speelveld](#spawner4)
         * [Scorebord](#environment5)
         * [Genereren van een traveller (reiziger)](#environment6)
     - [Traveller.cs (reiziger) *code-snippets*](#scripts2)        
@@ -27,6 +26,7 @@
         * [OnActionReceived](#thief6)
         * [OnCollisionEnter](#thief7)
         * [DestroyObjects (Optimizations)](#thief8)
+6. [Observaties, acties & beloning systeem](#beloning)
 7. [Resultaat in Tensorflow](#tensorflow)
 
 ## Introductie <a name="introductie"></a>
@@ -260,3 +260,23 @@ Selecteer het WallReward object in Unity en voeg volgende componenten eraan toe:
 Maak van het Obstacle object een *Prefab*
 <br>
 
+
+## Spelobjecten scripts (C#) <a name="allescripts"></a>
+Hieronder zullen we stapsgewijs per 3D object bekijken wat er moet staan in de script bestanden om ze een bepaald *gedrag* te geven en bepaalde *handelingen* te kunnen laten uitvoeren bij bepaalde *omstandigheden*.
+<br>
+Maak een nieuw folder aan in de project folder genaamd Scripts. Hierin zullen alle script bestanden staan die we gaan creëren en zullen gebruiken op het juiste 3D object.
+
+### Spawner.cs <a name="scripts"></a>
+Het eerste script bestandje die we zullen maken krijgt de naam *Spawner*. In het *Spawner.cs* script staat er code in om de **Obstacle** te doen spawnen op het platform. Al deze handelingen zullen bij het runnen van het project automatisch worden uitgevoerd door Unity.
+
+**Overzicht van de methodes** <a name="spawner"></a>
+In de ``Spawner Class`` zullen we volgende methodes gaan aanmaken.
+
+
+[Spawner.cs (omgeving) *code-snippets*](#scripts)
+        * [Overzicht van de methodes](#spawner)
+        * [Object-variabelen](#spawner2)
+        * [Initialisatie](#spawner3)
+        * [Opkuisen van het speelveld](#spawner4)
+        * [Scorebord](#environment5)
+        * [Genereren van een traveller (reiziger)](#environment6)

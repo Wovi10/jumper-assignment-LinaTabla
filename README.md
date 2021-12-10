@@ -379,12 +379,16 @@ In de ``Obstacle Class`` zullen we volgende methodes gaan aanmaken:
 - ``Update``
 - ``OnCollisionEnter``
 
+<br>
+
 **Object-variabelen** <a name="obstacle2"></a>
 <br>
 We creëren volgende *public* object-variabele:
 ```csharp
 public float moveSpeed = 3.5f;
 ```
+
+<br>
 
 **Script koppelen** <a name="obstacle3"></a>
 <br>

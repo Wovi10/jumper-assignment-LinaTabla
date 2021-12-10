@@ -12,21 +12,15 @@
     - [Spawner.cs (omgeving) *code-snippets*](#scripts)
         * [Overzicht van de methodes](#spawner)
         * [Object-variabelen](#spawner2)
-        * [Initialisatie](#spawner3)
-        * [Opkuisen van het speelveld](#spawner4)
-        * [Scorebord](#environment5)
-        * [Genereren van een traveller (reiziger)](#environment6)
-    - [Traveller.cs (reiziger) *code-snippets*](#scripts2)        
-    - [Thief.cs (dief) *code-snippets*](#scripts3)
-        * [Overzicht van methodes](#thief)
-        * [Object variabelen](#thief2)
-        * [Initialiseer de dief](#thief3)
-        * [OnEpisodeBegin](#thief4)
-        * [Heuristic](#thief5)
-        * [OnActionReceived](#thief6)
-        * [OnCollisionEnter](#thief7)
-        * [DestroyObjects (Optimizations)](#thief8)
-6. [Observaties, acties & beloning systeem](#beloning)
+        * [Script koppelen](#spawner3)
+    - [Player.cs *code-snippets*](#scripts2)
+        * [Overzicht van de methodes](#player)
+        * [Object-variabelen](#player2)
+        * [Script koppelen](#player3)        
+    - [Obstacle.cs *code-snippets*](#scripts3)
+        * [Overzicht van methodes](#obstacle)
+        * [Object variabelen](#obstacle2)
+        * [Script koppelen](obstacle3)    
 7. [Resultaat in Tensorflow](#tensorflow)
 
 ## Introductie <a name="introductie"></a>
@@ -246,7 +240,7 @@ Selecteer het Obstacle object in Unity en voeg volgende componenten eraan toe:
 **Child-objecten**
 <br>
 
-Het Obstacle object heef één child-object, nl. **WallReward**. We gaan dit child-object toevoegen:
+Het Obstacle object heef één child-object, nl. *WallReward*. We gaan dit child-object toevoegen:
 <br>
 
 #### WallReward
@@ -278,7 +272,10 @@ Selecteer het WallReward object in Unity en voeg volgende componenten eraan toe:
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
+
 **Obstacle: prefab**
+<br>
+
 Maak van het Obstacle object een *Prefab*
 <br>
 <br>
@@ -293,13 +290,133 @@ Maak een nieuw folder aan in de project folder genaamd Scripts. Hierin zullen al
 Het eerste script bestandje die we zullen maken krijgt de naam *Spawner*. In het *Spawner.cs* script staat er code in om de **Obstacle** te doen spawnen op het platform. Al deze handelingen zullen bij het runnen van het project automatisch worden uitgevoerd door Unity.
 
 **Overzicht van de methodes** <a name="spawner"></a>
-In de ``Spawner Class`` zullen we volgende methodes gaan aanmaken.
+<br>
+In de ``Spawner Class`` zullen we volgende methodes gaan aanmaken:
+- ``InvokeRepeating`` -> Is een functie die ervoor zal zorgen dat de ``Spawn()`` methode op een bepaald tijdstip terug zal worden aangeroepen.
+
+- ``Spawn`` -> Deze methode zal ervoor zorgen dat de Obstacle zal worden gespawnt op het platform.
+
+**Object-variabelen** <a name="spawner2"></a>
+<br>
+We creëren een aantal *Public* object-variabelen:
+```csharp
+public GameObject prefab = null;
+public Transform spawnPoint = null;
+public float min = 1.0f;
+public float max = 3.5f;
+```
+
+**Script koppelen** <a name="spawner3"></a>
+En nu kunnen we het ``Spawner`` script gaan koppelen met de *Obstacle* zoals op onderstaande afbeelding.
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/spawnerscript.png"/>
+<br>
+
+- We vullen de *Prefab* in met het *Obstacle* object
+- We vullen het *Spawn Point* in met het *SpawnPoint* child-object van *Obstacle*
 
 
-[Spawner.cs (omgeving) *code-snippets*](#scripts)
-        * [Overzicht van de methodes](#spawner)
-        * [Object-variabelen](#spawner2)
-        * [Initialisatie](#spawner3)
-        * [Opkuisen van het speelveld](#spawner4)
-        * [Scorebord](#environment5)
-        * [Genereren van een traveller (reiziger)](#environment6)
+### Player.cs <a name="scripts2"></a>
+In het Player.cs script bestand zal alle actie plaatsvinden. Want in dit script bestand zullen we van ons *Player* 3D object een Agent maken door de Player class te laten overerven van de Agent class binnenin C#.
+
+```csharp
+public class Player : Agent
+{
+}
+```
+
+**Overzicht van de methodes** <a name=player"></a>
+<br>
+In de ``Player Class`` zullen we volgende methodes gaan aanmaken:
+- ``Initialize``
+- ``OnActionReceived``
+- ``Heuristic``
+- ``OnEpisodeBegin``
+- ``OnCollisionEnter``
+- ``OnTriggerEnter``
+- ``Thrust``
+- ``ResetPlayer``
+
+**Object-variabelen** <a name="player2"></a>
+<br>
+We creëren een aantal *public* en *private* object-variabelen:
+```csharp
+public float force = 15f;
+public Transform reset = null;
+private Rigidbody rb = null;
+```
+
+**Script koppelen** <a name="player3"></a>
+En nu kunnen we het ``Player`` script gaan koppelen met de *Player* zoals op onderstaande afbeelding.
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/playerscript.png"/>
+<br>
+
+- We vullen de *Reset* in met het *Obstacle* object
+- We vullen het *Reset* in met het *Reset* child-object van Road*
+
+
+### Obstacle.cs <a name="scripts2"></a>
+**Overzicht van de methodes** <a name=obstacle"></a>
+<br>
+In de ``Obstacle Class`` zullen we volgende methodes gaan aanmaken:
+- ``Update``
+- ``OnCollisionEnter``
+
+**Object-variabelen** <a name="obstacle2"></a>
+<br>
+We creëren volgende *public* object-variabele:
+```csharp
+public float moveSpeed = 3.5f;
+```
+
+**Script koppelen** <a name="obstacle3"></a>
+En nu kunnen we het ``Obstacle`` script gaan koppelen met de *Obstacle* zoals op onderstaande afbeelding.
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/obstaclescript.png"/>
+<br>
+
+
+## Resultaat in Tensorflow <a name="tensorflow"></a>
+Als laatste stap bekijken we kort de trainingsfase. Maakt een bestand in de *root* folder van je project genaamd *learning*. Hier binnen in maakt u een **.yml** bestand aan met de als naam **Player** -> **Player.yml**. Binnenin deze file plakt u onderstaande instellingen.
+
+```yaml
+behaviors:
+  PLayer:
+    trainer_type: ppo
+    max_steps: 5.0e7
+    time_horizon: 64
+    summary_freq: 10000
+    keep_checkpoints: 5
+    checkpoint_interval: 50000
+    
+    hyperparameters:
+      batch_size: 32
+      buffer_size: 9600
+      learning_rate: 3.0e-4
+      learning_rate_schedule: constant
+      beta: 5.0e-3
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3
+ 
+    network_settings:
+      num_layers: 2
+      hidden_units: 128
+      normalize: false
+      vis_encoder_type: simple
+ 
+    reward_signals:
+      extrinsic:
+        strength: 1.0
+        gamma: 0.99
+      curiosity:
+        strength: 0.02
+        gamma: 0.99
+        encoding_size: 256
+        learning_rate : 1e-3
+```
+Zorg er ook voor dat de *Behavior Parameters* **Player** overeenkomt met die in de **.yml** bestand anders zal het niet werken.
+<br>
+
+Nu kun je je agent trainen en vervolgens de resultaten tonen in Tensorflow.

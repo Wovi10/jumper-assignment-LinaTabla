@@ -1,4 +1,4 @@
-# Jumper Assignment Lina Tabla
+# Jumper Assignment
 
 # Inhoud
 1. [Introductie](#introductie)
@@ -347,6 +347,7 @@ private Rigidbody rb = null;
 ```
 
 **Script koppelen** <a name="player3"></a>
+<br>
 En nu kunnen we het ``Player`` script gaan koppelen met de *Player* zoals op onderstaande afbeelding.
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/playerscript.png"/>
@@ -357,6 +358,7 @@ En nu kunnen we het ``Player`` script gaan koppelen met de *Player* zoals op ond
 
 
 ### Obstacle.cs <a name="scripts2"></a>
+
 **Overzicht van de methodes** <a name=obstacle"></a>
 <br>
 In de ``Obstacle Class`` zullen we volgende methodes gaan aanmaken:
@@ -371,6 +373,7 @@ public float moveSpeed = 3.5f;
 ```
 
 **Script koppelen** <a name="obstacle3"></a>
+<br>
 En nu kunnen we het ``Obstacle`` script gaan koppelen met de *Obstacle* zoals op onderstaande afbeelding.
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/obstaclescript.png"/>

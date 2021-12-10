@@ -1,2 +1,85 @@
-# jumper-assignment-LinaTabla
-jumper-assignment-LinaTabla created by GitHub Classroom
+# Jumper Assignment Lina Tabla
+
+# Inhoud
+1. [Introductie](#introductie)
+2. [Nodige software en voorinstallatie](#benodigdheden)
+3. [Spelverloop](#spelverloop)
+4. [De spelomgeving](#spelomgeving)
+    - [Speelveld object](#speelveldobject)
+    - [Player object](#playerobject)
+    - [Obstacle object](#obstacleobject)
+    - [Scorebord object](#scorebordobject)
+5. [Observaties, acties & beloning systeem](#beloning)
+6. [Spelobjecten scripts (C#)](#allescripts)
+    - [Environment.cs (omgeving) *code-snippets*](#scripts)
+        * [Overzicht methodes van de omgeving](#environment)
+        * [Object-variabelen van de omgeving](#environment2)
+        * [Initialisatie van de omgeving instantie](#environment3)
+        * [Opkuisen van het speelveld](#environment4)
+        * [Scorebord](#environment5)
+        * [Genereren van een traveller (reiziger)](#environment6)
+    - [Traveller.cs (reiziger) *code-snippets*](#scripts2)        
+    - [Thief.cs (dief) *code-snippets*](#scripts3)
+        * [Overzicht van methodes](#thief)
+        * [Object variabelen](#thief2)
+        * [Initialiseer de dief](#thief3)
+        * [OnEpisodeBegin](#thief4)
+        * [Heuristic](#thief5)
+        * [OnActionReceived](#thief6)
+        * [OnCollisionEnter](#thief7)
+        * [DestroyObjects (Optimizations)](#thief8)
+7. [Resultaat in Tensorflow](#tensorflow)
+
+## Introductie <a name="introductie"></a>
+In  deze tutorial zullen we stap voor stap uitleggen hoe je door middel van *Machine Learning* - *ML Agents*, het gebruik van *Unity3D* en met behulp van *C#* code een basic project tot stand kan brengen. Iemand zonder programmeer ervaring zou deze tutorial ook moeten kunnen volgen. 
+
+## Nodige software en voorinstallatie <a name="benodigdheden"></a>
+### Software
+- [C# Visual Studio](https://visualstudio.microsoft.com/downloads/)
+- [Python 3](https://www.python.org/downloads/)
+- [Unity 3D](https://unity3d.com/get-unity/download)
+- [Anaconda](https://docs.anaconda.com/anaconda/)
+
+### Voorinstallatie
+1. Start een nieuw Unity 3D project
+2. Via de Package Manager van Unity installeer je ML Agents (download & import)
+
+## Spelverloop <a name="spelverloop"></a>
+In dit hoofdstuk wordt het spelverloop kort beschreven. De twee belangrijkste objecten in het spel zijn: de **agent (Player)** en een **obstakel (Obstacle)**. 
+De zelflerende agent ontwijkt het obstakel door er over te springen. Het obstakel krijgt elke episode een andere snelheid mee. 
+De agent noemen we *zelflerend* omdat die door middel van Machine Learning gaat leren om zo snel mogelijk onder de knie te krijgen wanneer een obstakel passeert op zijn pad om vervolgens te springen over het obstakel. Als dit succesvol verloopt, dan zal de Agent **beloont** worden.
+
+## De spelomgeving <a name="spelomgeving"></a>
+We starten met alle objecten te creëren. Er zijn 3 objecten: Road, Player en Obstacle.
+
+### Speelveld object <a name="speelveldobject"></a>
+Het speelveld heeft volgende eigenschappen:
+- Naam: *Road*
+- 3D Object: Cube
+- Schaal: X = 14 | Y = 0.5 | Z = 1.5
+- Positie en rotatie: X = Y = Z = 0
+
+### Player object <a name="obstacleobject"></a>
+De player heeft volgende eigenschappen:
+- Naam: *Player*
+- 3D Object: Cube
+- Schaal: X = 0.5 | Y = 0.5 | Z = 0.5
+- Positie: X = 0 | Y = 0.35 | Z = -4.5
+- Rotatie: X = 0 | Y = 0 | Z = 90
+
+Selecteer de Player object in Unity en voeg volgende componenten eraan toe:
+- Rigidbody
+- Box Collider
+
+
+### Obstacle object <a name="obstacleobject"></a>
+Het obstakel heeft volgende eigenschappen:
+- Naam: *Obstacle*
+- 3D Object: Cube
+- Schaal: X = 1 | Y = 0.5 | Z = 0.5
+- Positie: X = 0 | Y = 0.4 | Z = 3
+- Rotatie: X = Y = Z = 0
+
+Onderstaande afbeelding toont de volledige hiërarchie binnen de spelobjecten met hun benaming zoals ze in deze handleiding gebruikt zullen worden. 
+<img alt="header-image" width="40%" height="40%" align="center" src="./Images/Hiërachie-objecten.png"/>
+

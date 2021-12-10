@@ -255,7 +255,8 @@ Selecteer het WallReward object in Unity en voeg volgende componenten eraan toe:
 <br>
 >Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
-<br>
->Maak van het Obstacle object een *Prefab*
+
+#### Obstacle: prefab
+Maak van het Obstacle object een *Prefab*
 <br>
 

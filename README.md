@@ -69,6 +69,7 @@ Het speelveld heeft volgende eigenschappen:
 <br>
 Selecteer het Road object in Unity en voeg volgend component eraan toe:
 <br>
+<br>
 
 **Box Collider**
 <br>
@@ -82,17 +83,16 @@ Het Road object heeft vier child-objecten, nl. SpawnPoint, WallEnd, Reset en Wal
 <br>
 
 ##### SpawnPoint
-<br>
 Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenschappen:
-- Naam: SpawnPoint
-- Positie: X = 0 | Y = 4 | Z = 0.3
-- Rotatie: X = Y = Z = 0
-- Scale: X = 0.5 | Y = 0.5 | Z = 0.5
-- Eventueel een roze *Icon* zodat het goed te zien is
+* Naam: SpawnPoint
+* Positie: X = 0 | Y = 4 | Z = 0.3
+* Rotatie: X = Y = Z = 0
+* Scale: X = 0.5 | Y = 0.5 | Z = 0.5
+* Eventueel een roze *Icon* zodat het goed te zien is
+
 <br>
 
 ##### WallEnd
-<br>
 Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschappen:
 - Naam: WallEnd
 - Positie: X = 0 | Y = 4.14 | Z = -0.55
@@ -112,23 +112,22 @@ Selecteer het *Wallend* object in Unity en voeg volgend component eraan toe:
 <br>
 
 ##### Reset
-<br>
 Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenschappen:
-- Naam: Reset
-- Positie: X = 0 | Y = 3.5 | Z = -0.45
-- Rotatie: X = Y = Z = 0
-- Scale: X = 0.5 | Y = 0.5 | Z = 0.5
-- Eventueel een groene *Icon* zodat het goed te zien is
+* Naam: Reset
+* Positie: X = 0 | Y = 3.5 | Z = -0.45
+* Rotatie: X = Y = Z = 0
+* Scale: X = 0.5 | Y = 0.5 | Z = 0.5
+* Eventueel een groene *Icon* zodat het goed te zien is
+
 <br>
 
 ##### WallTop
-<br>
 Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschappen:
-- Naam: WallTop
-- Positie: X = -0.003 | Y = 31.3 | Z = -0.389
-- Rotatie: X = Y = Z = 0
-- Scale: X = 1 | Y = 4 | Z = 0.15
-- Tag: walltop
+* Naam: WallTop
+* Positie: X = -0.003 | Y = 31.3 | Z = -0.389
+* Rotatie: X = Y = Z = 0
+* Scale: X = 1 | Y = 4 | Z = 0.15
+* Tag: walltop
 
 <br>
 Selecteer het *WallTop* object in Unity en voeg volgend component eraan toe:

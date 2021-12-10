@@ -311,6 +311,7 @@ public float max = 3.5f;
 ```
 
 <br>
+
 **Script koppelen** <a name="spawner3"></a>
 <br>
 En nu kunnen we het ``Spawner`` script gaan koppelen met de *Obstacle* zoals op onderstaande afbeelding.

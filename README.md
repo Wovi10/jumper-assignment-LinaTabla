@@ -103,6 +103,7 @@ Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschap
 <br>
 Selecteer het *Wallend* object in Unity en voeg volgend component eraan toe:
 <br>
+<br>
 
 **Box Collider**
 <br>
@@ -118,6 +119,8 @@ Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenscha
 * Rotatie: X = Y = Z = 0
 * Scale: X = 0.5 | Y = 0.5 | Z = 0.5
 * Eventueel een groene *Icon* zodat het goed te zien is
+
+<br>
 
 ##### WallTop
 Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschappen:
@@ -206,6 +209,7 @@ Het obstakel heeft volgende eigenschappen:
 <br>
 Selecteer het Obstacle object in Unity en voeg volgende componenten eraan toe:
 <br>
+<br>
 
 **Rigidbody**
 <br>
@@ -226,7 +230,6 @@ Het Obstacle object heef één child-object, nl. WallReward. We gaan dit child-o
 <br>
 
 ##### WallReward
-<br>
 Voeg aan het *Obstacle* object een *Cube* object toe en geef het volgende eigenschappen:
 - Naam: WallReward
 - Positie: X = 0 | Y = 2.14 | Z = 1.12
@@ -236,6 +239,7 @@ Voeg aan het *Obstacle* object een *Cube* object toe en geef het volgende eigens
 
 <br>
 Selecteer het WallReward object in Unity en voeg volgende componenten eraan toe:
+<br>
 <br>
 
 **Rigidbody**
@@ -253,6 +257,6 @@ Selecteer het WallReward object in Unity en voeg volgende componenten eraan toe:
 <br>
 
 <br>
->Maak van het Obstacle object een *Prefab*
+> Maak van het Obstacle object een *Prefab*
 <br>
 

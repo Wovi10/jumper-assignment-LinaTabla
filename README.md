@@ -119,8 +119,6 @@ Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenscha
 * Scale: X = 0.5 | Y = 0.5 | Z = 0.5
 * Eventueel een groene *Icon* zodat het goed te zien is
 
-<br>
-
 ##### WallTop
 Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschappen:
 * Naam: WallTop
@@ -131,6 +129,7 @@ Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschap
 
 <br>
 Selecteer het *WallTop* object in Unity en voeg volgend component eraan toe:
+<br>
 <br>
 
 **Box Collider**

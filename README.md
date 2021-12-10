@@ -289,12 +289,16 @@ Maak een nieuw folder aan in de project folder genaamd Scripts. Hierin zullen al
 ### Spawner.cs <a name="scripts"></a>
 Het eerste script bestandje die we zullen maken krijgt de naam *Spawner*. In het *Spawner.cs* script staat er code in om de **Obstacle** te doen spawnen op het platform. Al deze handelingen zullen bij het runnen van het project automatisch worden uitgevoerd door Unity.
 
+<br>
+
 **Overzicht van de methodes** <a name="spawner"></a>
 <br>
 In de ``Spawner Class`` zullen we volgende methodes gaan aanmaken:
 - ``InvokeRepeating`` -> Is een functie die ervoor zal zorgen dat de ``Spawn()`` methode op een bepaald tijdstip terug zal worden aangeroepen.
 
 - ``Spawn`` -> Deze methode zal ervoor zorgen dat de Obstacle zal worden gespawnt op het platform.
+
+<br>
 
 **Object-variabelen** <a name="spawner2"></a>
 <br>
@@ -306,7 +310,9 @@ public float min = 1.0f;
 public float max = 3.5f;
 ```
 
+<br>
 **Script koppelen** <a name="spawner3"></a>
+<br>
 En nu kunnen we het ``Spawner`` script gaan koppelen met de *Obstacle* zoals op onderstaande afbeelding.
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/spawnerscript.png"/>
@@ -315,6 +321,7 @@ En nu kunnen we het ``Spawner`` script gaan koppelen met de *Obstacle* zoals op 
 - We vullen de *Prefab* in met het *Obstacle* object
 - We vullen het *Spawn Point* in met het *SpawnPoint* child-object van *Obstacle*
 
+<br>
 
 ### Player.cs <a name="scripts2"></a>
 In het Player.cs script bestand zal alle actie plaatsvinden. Want in dit script bestand zullen we van ons *Player* 3D object een Agent maken door de Player class te laten overerven van de Agent class binnenin C#.
@@ -324,6 +331,8 @@ public class Player : Agent
 {
 }
 ```
+
+<br>
 
 **Overzicht van de methodes** <a name=player"></a>
 <br>
@@ -337,6 +346,8 @@ In de ``Player Class`` zullen we volgende methodes gaan aanmaken:
 - ``Thrust``
 - ``ResetPlayer``
 
+<br>
+
 **Object-variabelen** <a name="player2"></a>
 <br>
 We creëren een aantal *public* en *private* object-variabelen:
@@ -345,6 +356,8 @@ public float force = 15f;
 public Transform reset = null;
 private Rigidbody rb = null;
 ```
+
+<br>
 
 **Script koppelen** <a name="player3"></a>
 <br>
@@ -356,6 +369,7 @@ En nu kunnen we het ``Player`` script gaan koppelen met de *Player* zoals op ond
 - We vullen de *Reset* in met het *Obstacle* object
 - We vullen het *Reset* in met het *Reset* child-object van Road*
 
+<br>
 
 ### Obstacle.cs <a name="scripts2"></a>
 
@@ -378,7 +392,7 @@ En nu kunnen we het ``Obstacle`` script gaan koppelen met de *Obstacle* zoals op
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/obstaclescript.png"/>
 <br>
-
+<br>
 
 ## Resultaat in Tensorflow <a name="tensorflow"></a>
 Als laatste stap bekijken we kort de trainingsfase. Maakt een bestand in de *root* folder van je project genaamd *learning*. Hier binnen in maakt u een **.yml** bestand aan met de als naam **Player** -> **Player.yml**. Binnenin deze file plakt u onderstaande instellingen.

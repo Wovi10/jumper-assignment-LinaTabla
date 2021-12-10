@@ -67,9 +67,43 @@ De player heeft volgende eigenschappen:
 - Rotatie: X = 0 | Y = 0 | Z = 90
 
 Selecteer de Player object in Unity en voeg volgende componenten eraan toe:
-- Rigidbody
-- Box Collider
+**Rigidbody**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rigidbody.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Rigibody* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
 
+**Box Collider**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
+**Ray Perception Sensor3D**
+De acties die de dief object zal gaan uitvoeren zijn gebaseerd op observaties. Om ervoor te gaan zorgen dat de dief kan gaan observeren maken we gebruiken van het **Ray Perception Sensor3D** component.
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rps3D.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Ray Perception Sensor3D* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
+**Behavior Parameters**
+Voeg een *Behavior parameters* toe met de naam **Player**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/behaviorparam.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Behavior Parameters* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
+**Decision requester**
+Voeg een *Decision requesters* toe (dit is een automatische trigger om de agent te dwingen iets te gaan doen)
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/desicionrequester.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Decision requester* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
 
 ### Obstacle object <a name="obstacleobject"></a>
 Het obstakel heeft volgende eigenschappen:
@@ -80,6 +114,7 @@ Het obstakel heeft volgende eigenschappen:
 - Rotatie: X = Y = Z = 0
 
 Onderstaande afbeelding toont de volledige hiërarchie binnen de spelobjecten met hun benaming zoals ze in deze handleiding gebruikt zullen worden.
+<br>
 <br>
 <img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/hi%C3%ABrachie-objecten.png"/>
 

@@ -50,13 +50,96 @@ De agent noemen we *zelflerend* omdat die door middel van Machine Learning gaat 
 
 ## De spelomgeving <a name="spelomgeving"></a>
 We starten met alle objecten te creëren. Er zijn 3 objecten: Road, Player en Obstacle.
+<br>
+Onderstaande afbeelding toont de volledige hiërarchie binnen de spelobjecten met hun benaming zoals ze in deze handleiding gebruikt zullen worden.
+<br>
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/hi%C3%ABrachie-objecten.png"/>
+<br>
 
 ### Speelveld object <a name="speelveldobject"></a>
 Het speelveld heeft volgende eigenschappen:
 - Naam: *Road*
 - 3D Object: Cube
-- Schaal: X = 14 | Y = 0.5 | Z = 1.5
 - Positie en rotatie: X = Y = Z = 0
+- Schaal: X = 2 | Y = 0.1 | Z = 10
+- Tag: road
+
+<br>
+Selecteer het Road object in Unity en voeg volgend component eraan toe:
+<br>
+
+**Box Collider**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
+#### Speelveld: child-objecten
+Het Road object heeft vier child-objecten, nl. SpawnPoint, WallEnd, Reset en WallTop. We gaan elk child-object toevoegen:
+<br>
+
+##### SpawnPoint
+<br>
+Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenschappen:
+- Naam: SpawnPoint
+- Positie: X = 0 | Y = 4 | Z = 0.3
+- Rotatie: X = Y = Z = 0
+- Scale: X = 0.5 | Y = 0.5 | Z = 0.5
+- Eventueel een roze *Icon* zodat het goed te zien is
+<br>
+
+##### WallEnd
+<br>
+Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschappen:
+- Naam: WallEnd
+- Positie: X = 0 | Y = 4.14 | Z = -0.55
+- Rotatie: X = Y = Z = 0
+- Scale: X = 1.2 | Y = 12 | Z = 0.12
+- Tag: wallend
+
+<br>
+Selecteer het *Wallend* object in Unity en voeg volgend component eraan toe:
+<br>
+
+**Box Collider**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
+##### Reset
+<br>
+Voeg aan het *Road* object een *Empty* object toe en geef het volgende eigenschappen:
+- Naam: Reset
+- Positie: X = 0 | Y = 3.5 | Z = -0.45
+- Rotatie: X = Y = Z = 0
+- Scale: X = 0.5 | Y = 0.5 | Z = 0.5
+- Eventueel een groene *Icon* zodat het goed te zien is
+<br>
+
+##### WallTop
+<br>
+Voeg aan het *Road* object een *Cube* object toe en geef het volgende eigenschappen:
+- Naam: WallTop
+- Positie: X = -0.003 | Y = 31.3 | Z = -0.389
+- Rotatie: X = Y = Z = 0
+- Scale: X = 1 | Y = 4 | Z = 0.15
+- Tag: walltop
+
+<br>
+Selecteer het *WallTop* object in Unity en voeg volgend component eraan toe:
+<br>
+
+**Box Collider**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
 
 ### Player object <a name="playerobject"></a>
 De player heeft volgende eigenschappen:
@@ -66,8 +149,8 @@ De player heeft volgende eigenschappen:
 - Positie: X = 0 | Y = 0.35 | Z = -4.5
 - Rotatie: X = 0 | Y = 0 | Z = 90
 
-Selecteer de Player object in Unity en voeg volgende componenten eraan toe:
 <br>
+Selecteer de Player object in Unity en voeg volgende componenten eraan toe:
 <br>
 
 **Rigidbody**
@@ -111,16 +194,34 @@ Voeg een *Decision requesters* toe (dit is een automatische trigger om de agent 
 >Zorg ervoor dat de instellingen van het component *Decision requester* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 
+
 ### Obstacle object <a name="obstacleobject"></a>
 Het obstakel heeft volgende eigenschappen:
 - Naam: *Obstacle*
 - 3D Object: Cube
-- Schaal: X = 1 | Y = 0.5 | Z = 0.5
 - Positie: X = 0 | Y = 0.4 | Z = 3
 - Rotatie: X = Y = Z = 0
+- Schaal: X = 1 | Y = 0.5 | Z = 0.5
+- Tag: obstacle
 
-Onderstaande afbeelding toont de volledige hiërarchie binnen de spelobjecten met hun benaming zoals ze in deze handleiding gebruikt zullen worden.
+<br>
+Selecteer het Obstacle object in Unity en voeg volgende componenten eraan toe:
+<br>
+
+**Rigidbody**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/rigidbody.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Rigibody* helemaal hetzelfde zijn als de afbeelding hierboven.
+<br>
+
+**Box Collider**
+<br>
+<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/boxcollider.png"/>
+<br>
+>Zorg ervoor dat de instellingen van het component *Box Collider* helemaal hetzelfde zijn als de afbeelding hierboven.
 <br>
 <br>
-<img alt="header-image" src="https://raw.githubusercontent.com/AP-IT-GH/jumper-assignment-LinaTabla/main/Images/hi%C3%ABrachie-objecten.png"/>
+>Maak van het Obstacle object een *Prefab*
+<br>
 

@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.MLAgents;
+using Unity.MLAgents.Actuators;
 using UnityEngine;
 
 public class Player : Agent
 {
-    public float force = 15f;
+    public float force = 8.0f;
     public Transform reset = null;
     private Rigidbody rb = null;
+    private bool canJump = true;
 
     public override void Initialize()
     {
@@ -15,23 +17,40 @@ public class Player : Agent
         rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
     }
 
-    public override void OnActionReceived(float[] vectorAction)
+    // public override void OnActionReceived(float[] vectorAction)
+    // {
+    //     if (vectorAction[0] == 1)
+    //     {
+    //         Thrust();
+    //     }
+    // }
+
+    public override void OnActionReceived(ActionBuffers actions)
     {
-        if (vectorAction[0] == 1)
+        var actionsDiscrete = actions.DiscreteActions;
+        if (actionsDiscrete[0] == 1)
         {
             Thrust();
         }
     }
+    
+    // public override void Heuristic(float[] actionsOut)
+    // {
+    //     actionsOut[0] = 0;
+    //     if (Input.GetKey(KeyCode.UpArrow) == true)
+    //     {
+    //         actionsOut[0] = 1;
+    //     }
+    // }
 
-    public override void Heuristic(float[] actionsOut)
+    public override void Heuristic(in ActionBuffers actionsOut)
     {
-        actionsOut[0] = 0;
-        if (Input.GetKey(KeyCode.UpArrow) == true)
-        {
-            actionsOut[0] = 1;
-        }
+        var actionsOutDiscrete = actionsOut.DiscreteActions;
+        if (Input.GetKey(KeyCode.UpArrow))
+            actionsOutDiscrete[0] = 1;
     }
-
+    
+    
     public override void OnEpisodeBegin()
     {
         ResetPlayer();
@@ -45,11 +64,11 @@ public class Player : Agent
             Destroy(collision.gameObject);
             EndEpisode();
         }
-        if (collision.gameObject.CompareTag("walltop") == true)
-        {
-            AddReward(-1.0f);
-            EndEpisode();
-        }
+        // if (collision.gameObject.CompareTag("walltop") == true)
+        // {
+        //     AddReward(-1.0f);
+        //     EndEpisode();
+        // }
     }
     
     private void OnTriggerEnter(Collider other)
@@ -62,7 +81,13 @@ public class Player : Agent
 
     private void Thrust()
     {
-        rb.AddForce(Vector3.up * force, ForceMode.Acceleration);
+        //rb.AddForce(Vector3.up * force, ForceMode.Acceleration);
+        if (canJump)
+        {
+            canJump = false; // Om dit te laten werken moet je het landen van de player zien door een trigger of collision op te vangen
+            // Dat gaat problemen geven omdat ge constant een collision hebt, dus gaat ge ook een andere rigidbody moeten vastmaken aan de player die apart triggered
+            rb.AddForce(Vector2.up * force, ForceMode.Impulse);
+        }
     }
 
     private void ResetPlayer()
